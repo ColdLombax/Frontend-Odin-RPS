@@ -47,6 +47,7 @@ function Selected({
         setGameState(true);
       } else if (computerChoice === "paper" && playerChoice === "rock") {
         setGameMessage("YOU LOSE");
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         setScore((score -= 1));
         setGameState(true);
       } else if (computerChoice === "scissors" && playerChoice === "paper") {
