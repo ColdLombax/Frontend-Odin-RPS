@@ -10,6 +10,7 @@ import Selected from "./components/Selected";
 function App() {
   const [playerPicked, setPlayerPicked] = useState(false);
   const [playerChoice, setPlayerChoice] = useState("");
+  const [isGameOver, setIsGameOver] = useState(true);
 
   useEffect(() => {
     if (playerChoice) {
@@ -22,7 +23,11 @@ function App() {
     <div className='pt-10 p-5 flex flex-col items-center'>
       <ScoreBoard />
       {playerPicked ? (
-        <Selected playerChoice={playerChoice} />
+        <Selected
+          isGameOver={isGameOver}
+          setGameState={setIsGameOver}
+          playerChoice={playerChoice}
+        />
       ) : (
         <div
           id='board'
