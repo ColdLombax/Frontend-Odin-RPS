@@ -5,6 +5,7 @@ import ScoreBoard from "./components/ScoreBoard";
 import Rules from "./components/Rules";
 
 import "./App.css";
+import Selected from "./components/Selected";
 
 function App() {
   const [playerPicked, setPlayerPicked] = useState(true);
@@ -14,16 +15,7 @@ function App() {
     <div className='pt-10 p-5 flex flex-col items-center'>
       <ScoreBoard />
       {playerPicked ? (
-        <div className='flex gap-5 sm:gap-60'>
-          <div className='flex flex-col items-center gap-5 sm:text-2xl'>
-            <h2>YOU PICKED</h2>
-            <ChoiceButton choice={"rock"} color='border-indigo-500' />
-          </div>
-          <div className='flex flex-col items-center gap-5 sm:text-2xl'>
-            <h2>THE HOUSE PICKED</h2>
-            <ChoiceButton choice={"scissors"} color='border-red-500' />
-          </div>
-        </div>
+        <Selected />
       ) : (
         <div
           id='board'
