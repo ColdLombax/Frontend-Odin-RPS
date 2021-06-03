@@ -6,7 +6,7 @@ import rock from "../images/icon-rock.svg";
 
 type PropTypes = {
   choice: string;
-  span: boolean;
+  span?: boolean;
   color: string;
 };
 
