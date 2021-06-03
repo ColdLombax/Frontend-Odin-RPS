@@ -6,11 +6,17 @@ import rock from "../images/icon-rock.svg";
 
 type PropTypes = {
   choice: string;
+  span: boolean;
+  color: string;
 };
 
-function ChoiceButton({ choice }: PropTypes) {
+function ChoiceButton({ choice, span, color }: PropTypes) {
   return (
-    <div className='w-28 h-28 bg-white rounded-full flex flex-col justify-center items-center border-20 border-indigo-500 sm:w-48 sm:h-48'>
+    <div
+      className={`w-28 h-28 bg-white rounded-full flex flex-col justify-center items-center border-20 ${color} sm:w-48 sm:h-48  ${
+        span ? "col-span-2" : ""
+      }`}
+    >
       <img
         src={choice === "rock" ? rock : choice === "paper" ? paper : scissors}
         alt={`${
