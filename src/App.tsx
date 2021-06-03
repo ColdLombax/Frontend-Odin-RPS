@@ -2,6 +2,7 @@ import ChoiceButton from "./components/ChoiceButton";
 import ScoreBoard from "./components/ScoreBoard";
 
 import "./App.css";
+import Rules from "./components/Rules";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         />
         <ChoiceButton span={true} choice='paper' color='border-red-500' />
       </div>
+      <Rules />
     </div>
   );
 }

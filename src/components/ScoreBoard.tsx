@@ -4,7 +4,7 @@ function ScoreBoard() {
   return (
     <div
       id='score-board'
-      className=' text-xl flex justify-center items-center pl-4 p-5 border-4 border-gray-400 rounded-xl w-full max-w-2xl mb-20 sm:text-4xl '
+      className=' text-xl flex justify-center items-center pl-4 p-5 border-4 border-gray-400 rounded-xl w-full max-w-2xl mb-5 sm:text-4xl sm:mb-20'
     >
       <h1 className='leading-none'>
         Rock
