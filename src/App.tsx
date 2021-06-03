@@ -11,6 +11,14 @@ function App() {
   const [playerPicked, setPlayerPicked] = useState(false);
   const [playerChoice, setPlayerChoice] = useState("");
   const [isGameOver, setIsGameOver] = useState(false);
+  const [score, setScore] = useState(0);
+
+  useEffect(() => {
+    if (isGameOver) {
+      localStorage.setItem("score", score.toString());
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isGameOver]);
 
   useEffect(() => {
     if (playerChoice) {
@@ -19,11 +27,21 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [playerChoice]);
 
+  useEffect(() => {
+    if (localStorage.getItem("score") !== null) {
+      setScore(+localStorage.getItem("score")!);
+    } else {
+      localStorage.setItem("score", score.toString());
+    }
+  }, [score]);
+
   return (
     <div className='pt-10 p-5 flex flex-col items-center'>
-      <ScoreBoard />
+      <ScoreBoard score={score} />
       {playerPicked ? (
         <Selected
+          setScore={setScore}
+          score={score}
           isGameOver={isGameOver}
           setGameState={setIsGameOver}
           playerChoice={playerChoice}

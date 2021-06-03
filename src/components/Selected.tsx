@@ -7,9 +7,17 @@ type PropTypes = {
   playerChoice: string;
   setGameState: any;
   isGameOver: boolean;
+  setScore: any;
+  score: number;
 };
 
-function Selected({ playerChoice, setGameState, isGameOver }: PropTypes) {
+function Selected({
+  playerChoice,
+  setGameState,
+  isGameOver,
+  setScore,
+  score,
+}: PropTypes) {
   const [computerChoice, setComputerChoice] = useState("");
   const [gameMessage, setGameMessage] = useState("");
 
@@ -39,18 +47,23 @@ function Selected({ playerChoice, setGameState, isGameOver }: PropTypes) {
         setGameState(true);
       } else if (computerChoice === "paper" && playerChoice === "rock") {
         setGameMessage("YOU LOSE");
+        setScore((score -= 1));
         setGameState(true);
       } else if (computerChoice === "scissors" && playerChoice === "paper") {
         setGameMessage("YOU LOSE");
+        setScore((score -= 1));
         setGameState(true);
       } else if (computerChoice === "rock" && playerChoice === "scissors") {
         setGameMessage("YOU LOSE");
+        setScore((score -= 1));
         setGameState(true);
       } else {
         setGameMessage("YOU WIN");
+        setScore((score += 1));
         setGameState(true);
       }
     }
+    // eslint-disable-next-line
   }, [computerChoice]);
 
   return (
