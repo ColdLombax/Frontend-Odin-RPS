@@ -8,14 +8,21 @@ type PropTypes = {
   choice: string;
   span?: boolean;
   color: string;
+  setChoice?: any;
 };
 
-function ChoiceButton({ choice, span, color }: PropTypes) {
+function ChoiceButton({ choice, span, color, setChoice }: PropTypes) {
+  const clickHandler = () => {
+    if (setChoice) {
+      setChoice(choice);
+    }
+  };
   return (
     <div
-      className={`w-28 h-28 bg-white rounded-full flex flex-col justify-center items-center border-20 ${color} sm:w-48 sm:h-48  ${
+      className={`w-28 h-28 bg-white cursor-pointer rounded-full flex flex-col justify-center items-center border-20 ${color} sm:w-48 sm:h-48  ${
         span ? "col-span-2" : ""
       }`}
+      onClick={clickHandler}
     >
       <img
         src={choice === "rock" ? rock : choice === "paper" ? paper : scissors}
