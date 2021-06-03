@@ -10,7 +10,7 @@ import Selected from "./components/Selected";
 function App() {
   const [playerPicked, setPlayerPicked] = useState(false);
   const [playerChoice, setPlayerChoice] = useState("");
-  const [isGameOver, setIsGameOver] = useState(true);
+  const [isGameOver, setIsGameOver] = useState(false);
 
   useEffect(() => {
     if (playerChoice) {

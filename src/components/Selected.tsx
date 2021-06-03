@@ -11,6 +11,7 @@ type PropTypes = {
 
 function Selected({ playerChoice, setGameState, isGameOver }: PropTypes) {
   const [computerChoice, setComputerChoice] = useState("");
+  const [gameMessage, setGameMessage] = useState("");
 
   const handleComputerChoice = () => {
     const value = Math.floor(Math.random() * 3);
@@ -33,8 +34,22 @@ function Selected({ playerChoice, setGameState, isGameOver }: PropTypes) {
 
   useEffect(() => {
     if (computerChoice) {
-      console.log(computerChoice);
-      console.log(playerChoice);
+      if (computerChoice === playerChoice) {
+        setGameMessage("DRAW");
+        setGameState(true);
+      } else if (computerChoice === "paper" && playerChoice === "rock") {
+        setGameMessage("YOU LOSE");
+        setGameState(true);
+      } else if (computerChoice === "scissors" && playerChoice === "paper") {
+        setGameMessage("YOU LOSE");
+        setGameState(true);
+      } else if (computerChoice === "rock" && playerChoice === "scissors") {
+        setGameMessage("YOU LOSE");
+        setGameState(true);
+      } else {
+        setGameMessage("YOU WIN");
+        setGameState(true);
+      }
     }
   }, [computerChoice]);
 
@@ -53,7 +68,7 @@ function Selected({ playerChoice, setGameState, isGameOver }: PropTypes) {
           }
         />
       </div>
-      {isGameOver && <GameOver message='hello' />}
+      {isGameOver && <GameOver message={gameMessage} />}
       <div className='flex flex-col-reverse items-center gap-5 sm:text-2xl sm:flex-col'>
         <h2>THE HOUSE PICKED</h2>
         {computerChoice ? (
