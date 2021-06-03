@@ -6,7 +6,9 @@ function App() {
     <div className='pt-10 p-5 flex flex-col items-center'>
       <ScoreBoard />
       <div className='w-full max-w-2xl grid'>
-        <ChoiceButton />
+        <ChoiceButton choice='rock' />
+        <ChoiceButton choice='scissors' />
+        <ChoiceButton choice='paper' />
       </div>
     </div>
   );
