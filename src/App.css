@@ -1,0 +1,7 @@
+#board {
+  background-image: url("./images/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-position-y: 35px;
+}
