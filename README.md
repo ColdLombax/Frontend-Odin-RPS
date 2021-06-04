@@ -12,6 +12,8 @@ I wanted to practice using TailwindCSS, React and TypeScript. I'm familiar with 
 
 ### Tools Used
 
+- Local Storage
+
 - [TailwindCSS](https://tailwindcss.com/)
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
