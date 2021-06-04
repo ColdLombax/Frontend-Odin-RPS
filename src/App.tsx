@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 import ChoiceButton from "./components/ChoiceButton";
 import ScoreBoard from "./components/ScoreBoard";
-import Rules from "./components/Rules";
 
 import "./App.css";
 import Selected from "./components/Selected";
@@ -69,7 +68,6 @@ function App() {
           />
         </div>
       )}
-      <Rules />
     </div>
   );
 }
