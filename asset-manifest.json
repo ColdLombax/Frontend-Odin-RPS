@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Frontend-Odin-RPS/static/css/main.aed07e24.chunk.css",
+    "main.js": "/Frontend-Odin-RPS/static/js/main.3046b7e9.chunk.js",
+    "main.js.map": "/Frontend-Odin-RPS/static/js/main.3046b7e9.chunk.js.map",
+    "runtime-main.js": "/Frontend-Odin-RPS/static/js/runtime-main.6b46cf8b.js",
+    "runtime-main.js.map": "/Frontend-Odin-RPS/static/js/runtime-main.6b46cf8b.js.map",
+    "static/js/2.003ddb08.chunk.js": "/Frontend-Odin-RPS/static/js/2.003ddb08.chunk.js",
+    "static/js/2.003ddb08.chunk.js.map": "/Frontend-Odin-RPS/static/js/2.003ddb08.chunk.js.map",
+    "index.html": "/Frontend-Odin-RPS/index.html",
+    "static/css/main.aed07e24.chunk.css.map": "/Frontend-Odin-RPS/static/css/main.aed07e24.chunk.css.map",
+    "static/js/2.003ddb08.chunk.js.LICENSE.txt": "/Frontend-Odin-RPS/static/js/2.003ddb08.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/Frontend-Odin-RPS/static/media/bg-triangle.c0c30b56.svg",
+    "static/media/icon-paper.8b57a6b1.svg": "/Frontend-Odin-RPS/static/media/icon-paper.8b57a6b1.svg",
+    "static/media/icon-rock.476e90a9.svg": "/Frontend-Odin-RPS/static/media/icon-rock.476e90a9.svg",
+    "static/media/icon-scissors.3b1a5d7e.svg": "/Frontend-Odin-RPS/static/media/icon-scissors.3b1a5d7e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6b46cf8b.js",
+    "static/js/2.003ddb08.chunk.js",
+    "static/css/main.aed07e24.chunk.css",
+    "static/js/main.3046b7e9.chunk.js"
+  ]
+}
